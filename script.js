@@ -67,7 +67,7 @@ function initializeRanking() {
     fetchRankingData();
     
     // Atualizar o ranking a cada 30 segundos
-    setInterval(fetchRankingData, 100000);
+    setInterval(fetchRankingData, );
 }
 
 // Buscar dados do ranking da planilha usando SheetDB
