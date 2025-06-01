@@ -66,8 +66,8 @@ function initializeRanking() {
     // Simulação de dados para o ranking (será substituído pela integração real)
     fetchRankingData();
     
-    // Atualizar o ranking a cada 30 segundos
-    setInterval(fetchRankingData, );
+    // Atualizar o ranking a cada 1 hora
+    setInterval(fetchRankingData, 1000 * 60 * 60);
 }
 
 // Buscar dados do ranking da planilha usando SheetDB
