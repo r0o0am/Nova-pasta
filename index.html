@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão Premiada - Concorra a R$ 1.000,00!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="particles-container"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="logo.avif" alt="iGreen Energy Logo" class="logo">
+        </div>
+        <div class="header-content text-center">
+            <h1>Conexão Premiada</h1>
+            <h2>Concorra a R$ 1.000,00 em Prêmios!</h2>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="container">
+                <h2 class="section-title">Transforme Indicações em Dinheiro!</h2>
+                <p class="highlight-text">Você conhece alguém que precisa de desconto na conta de energia ou de um chip de telefonia de qualidade? Transforme esse conhecimento em R$ 1.000,00 no bolso!</p>
+                <p>A cada novo cliente cadastrado, você se aproxima do prêmio. Quem fizer o maior número de cadastros válidos até atingirmos 40 no total leva tudo!</p>
+                <div class="cta-button">
+                    <a href="#participar" class="btn pulse">Quero Participar!</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">Como Funciona a "Conexão Premiada"</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-icon">1</div>
+                        <h3>Inscreva-se</h3>
+                        <p>Preencha nosso formulário online com seus dados.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2</div>
+                        <h3>Indique seus contatos</h3>
+                        <p>Compartilhe com amigos, familiares e colegas. Cada pessoa que efetuar o cadastro conta como uma indicação válida.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3</div>
+                        <h3>Acompanhe o ranking</h3>
+                        <p>Fique de olho na sua posição e saiba quantos cadastros faltam para bater a meta de 40.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">4</div>
+                        <h3>Ganhe R$ 1.000,00</h3>
+                        <p>Quando alcançarmos 40 cadastros válidos, o participante com mais indicações leva o prêmio!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title">Prêmios e Benefícios</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-money-bill-wave"></i></div>
+                        <h3>Prêmio Principal</h3>
+                        <p>R$ 1.000,00 em dinheiro para quem indicar mais clientes até completar os 40 cadastros.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-users"></i></div>
+                        <h3>Visibilidade</h3>
+                        <p>Seu nome será divulgado em nosso site como um dos principais "Campeões de Indicação".</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-certificate"></i></div>
+                        <h3>Certificado Digital</h3>
+                        <p>Todos que confirmarem pelo menos 5 cadastros válidos recebem um certificado digital exclusivo.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h3>Impacto Social</h3>
+                        <p>Ajude amigos e familiares a economizar na conta de luz ou a ter um plano de telefonia acessível.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ranking" id="ranking">
+            <div class="container">
+                <h2 class="section-title">Ranking de Participantes</h2>
+                <p class="ranking-info">Acompanhe em tempo real quem está liderando a competição!</p>
+                <div class="ranking-container">
+                    <div class="ranking-header">
+                        <div class="rank-position">Posição</div>
+                        <div class="rank-name">Participante</div>
+                        <div class="rank-score">Indicações</div>
+                    </div>
+                    <div id="ranking-list">
+                        <!-- Ranking será carregado dinamicamente aqui -->
+                        <div class="ranking-loading">Carregando ranking...</div>
+                    </div>
+                </div>
+                <div class="ranking-meta">
+                    <div class="total-count">
+                        <span id="current-count">0</span> de <span id="target-count">40</span> cadastros realizados
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress-indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tips">
+            <div class="container">
+                <h2 class="section-title">Dicas para Alavancar Suas Indicações</h2>
+                <div class="tips-container">
+                    <div class="tip">
+                        <h3><i class="fas fa-share-alt"></i> Use as redes sociais</h3>
+                        <p>Publique sobre o benefício de desconto na conta de energia e explique como funciona o cadastro.</p>
+                    </div>
+                    <div class="tip">
+                        <h3><i class="fas fa-users"></i> Fale com amigos e familiares</h3>
+                        <p>Muitas vezes, quem está perto de você pode ter interesse imediato.</p>
+                    </div>
+                    <div class="tip">
+                        <h3><i class="fab fa-whatsapp"></i> Envie mensagens personalizadas</h3>
+                        <p>Mencione por que vale a pena e envie seu link logo no início da conversa.</p>
+                    </div>
+                    <div class="tip">
+                        <h3><i class="fas fa-user-friends"></i> Participe de grupos locais</h3>
+                        <p>Busque grupos no WhatsApp, Facebook ou Telegram onde as pessoas buscam economia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">Quando a competição termina?</div>
+                        <div class="accordion-content">
+                            <p>A "Conexão Premiada" termina assim que registrarmos o 40º cadastro válido. Portanto, fique sempre atento ao nosso ranking para não ficar para trás!</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Qual o valor do prêmio e como recebo?</div>
+                        <div class="accordion-content">
+                            <p>O prêmio é de R$ 1.000,00 em dinheiro. O vencedor deve enviar seus dados bancários (banco, agência, conta e CPF) em até 10 dias úteis após a divulgação. Faremos o depósito em até 15 dias úteis após a confirmação.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Como sei se um cadastro é considerado válido?</div>
+                        <div class="accordion-content">
+                            <p>Um cadastro é válido quando:</p>
+                            <ul>
+                                <li>Contém dados completos e reais do cliente;</li>
+                                <li>O documento de identidade e comprovante de residência forem aprovados pela nossa equipe;</li>
+                                <li>O cliente assinar o termo de adesão ao serviço (desconto de energia ou chip telefônico).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">O que acontece se eu me inscrever e não enviar os documentos a tempo?</div>
+                        <div class="accordion-content">
+                            <p>Você terá 10 dias úteis para regularizar qualquer pendência. Se não fizer isso dentro do prazo, sua inscrição será considerada inválida e não poderá concorrer ao prêmio.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Posso indicar apenas clientes de um dos serviços?</div>
+                        <div class="accordion-content">
+                            <p>Sim. Tanto cadastros para desconto de energia quanto para chip de telefonia contam como indicação válida. Quanto mais opções você oferecer, maior a chance de acúmulo de cadastros.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="registration" id="participar">
+            <div class="container">
+                <h2 class="section-title">Quero Participar!</h2>
+                <p class="registration-info">Preencha o formulário abaixo para se inscrever na Conexão Premiada:</p>
+                <div class="form-container">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9iH0iBxTb5qwkEb3tbFD6WXOvFZ6U-qwQqfL-XTbwsdtXKw/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="rules">
+            <div class="container">
+                <h2 class="section-title">Regulamento</h2>
+                <p class="rules-info">Confira o regulamento completo da promoção:</p>
+                <div class="rules-container">
+                    <iframe src="https://1drv.ms/b/c/39c41a91ae331fd5/IQSSikohKERqRp14xn-Ra_6lAbq805PknC2yZI3IoK7cNPg" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.avif" alt="iGreen Energy Logo" class="logo-small">
+                </div>
+                <div class="footer-info">
+                    <p>© 2025 Conexão Premiada – Todos os direitos reservados.</p>
+                    <div class="contact-info">
+                        <p><strong>Dúvidas?</strong></p>
+                        <p>E-mail: <a href="mailto:evertontrindade140@gmail.com">evertontrindade140@gmail.com</a></p>
+                        <p>WhatsApp oficial: <a href="https://wa.me/5567996834854">(67) 9 9683-4854</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
